@@ -83,7 +83,10 @@ public class Test01 {
             "&serverTimezone=GMT%2B8"加入这个就不会报(争对8的mysql连接jar包)
             java.sql.SQLException: The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
          */
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pmcenter?useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8", "root", "Brc@1234");
+        try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pmcenter?useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8", "root", "Brc@1234");) {
+
+        }
+
 
     }
 }

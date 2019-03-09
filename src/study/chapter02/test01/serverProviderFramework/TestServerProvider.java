@@ -1,19 +1,18 @@
 package study.chapter02.test01.serverProviderFramework;
 
-import study.chapter02.test01.serverProviderFramework.server.card.CardSubwayProviderImpl;
+import org.junit.jupiter.api.Test;
+
+import java.util.ServiceLoader;
 
 /**
  * 客户端测试类 
  * @author Administrator 
  * 
  */  
-public class Test {  
+public class TestServerProvider {
   
-    /** 
-     * @param args 
-     * @throws ClassNotFoundException  
-     */  
-    public static void main(String[] args) throws ClassNotFoundException {
+    @Test
+    public void test01() throws ClassNotFoundException {
 
         Class.forName("study.chapter02.test01.serverProviderFramework.server.card.CardSubwayProviderImpl");
         //ServiceManager.registerProvider("一卡通", new CardSubwayProviderImpl());
@@ -28,5 +27,10 @@ public class Test {
         SubwayInterface coin = ServiceManager.getService("投币");
         coin.in();
         coin.out();
+    }
+
+    @Test
+    public void test02(){
+
     }
 }  

@@ -1,4 +1,4 @@
-package study.chapter02.test03;
+ package study.chapter02.test03;
 
 /**
  * 懒汉式(线程安全，同步代码块)[不可用]

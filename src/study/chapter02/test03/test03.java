@@ -1,6 +1,6 @@
 package study.chapter02.test03;
 
-public class test03 {
+class test03 {
 
 
 }
