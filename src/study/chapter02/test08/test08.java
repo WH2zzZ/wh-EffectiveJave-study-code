@@ -3,6 +3,7 @@ package study.chapter02.test08;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.io.OutputStream;
 
 public class test08 {
 
@@ -12,7 +13,8 @@ public class test08 {
     @Test
     public void demo01() throws Throwable {
         try(ResourceClose resourceClose = new ResourceClose()) {
-
+            resourceClose.run();
+            OutputStream
         }
     }
 

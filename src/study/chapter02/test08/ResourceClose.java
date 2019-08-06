@@ -9,6 +9,12 @@ public class ResourceClose implements AutoCloseable {
         System.out.println("ResourceClose创建了");
     }
 
+    public void run(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
+    }
+
     @Override
     public void close() throws Exception {
         long endTime = System.currentTimeMillis();
